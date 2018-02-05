@@ -1,0 +1,110 @@
+body {
+  overflow: hidden;
+}
+
+.main {
+  /*  width: 100vw;*/
+  background-color: #fff;
+  /*  position: relative;*/
+}
+
+.top-row {
+  height: 20vh;
+}
+
+.top-button-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-button {
+  width: 80%;
+  border-radius: 50px;
+  border: 3px solid #000;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  padding: .5em;
+  margin: 2em 0 2em 0;
+  text-transform: uppercase;
+}
+
+.letters {
+  /*  height: 80vh;*/
+}
+
+.bg-letters {
+  /*  width: 115vw;*/
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.bg-letter {
+  padding: 1.6em;
+}
+
+.bg-letter:hover {
+  opacity: 0;
+}
+
+.main-title {
+  height: 30vh;
+  background-color: #fff;
+  position: absolute;
+  top: 45%;
+  left: calc((100% - 958px)/2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.refest {
+  width: 70vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 4.5em;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  color: #fff;
+  background: url(img/bg.png) no-repeat;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.refest,
+.adress {
+  padding: .7em;
+}
+
+.disappear {
+  opacity: 0;
+}
+
+.appear {
+  opacity: 1;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
