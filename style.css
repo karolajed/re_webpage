@@ -3,9 +3,7 @@ body {
 }
 
 .main {
-  /*  width: 100vw;*/
   background-color: #fff;
-  /*  position: relative;*/
 }
 
 .top-row {
@@ -17,6 +15,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.top-button a {
+  color: #000;
+  text-decoration: none;
+}
+.top-button:hover a {
+  color: #fff;
 }
 
 .top-button {
@@ -31,8 +37,14 @@ body {
   text-transform: uppercase;
 }
 
+.top-button:hover {
+  background-color: #000;
+  color: #fff;
+  border: 3px solid #fff;
+}
+
 .letters {
-  /*  height: 80vh;*/
+  height: 80vh;
 }
 
 .bg-letters {
@@ -56,7 +68,7 @@ body {
 }
 
 .bg-letter1:hover,
-.bg-letter2:hover, 
+.bg-letter2:hover,
 .bg-letter3:hover,
 .bg-letter4:hover,
 .bg-letter5:hover,
@@ -80,7 +92,7 @@ body {
   z-index: 0;
 }
 
-.refest {
+.refest-title {
   width: 70vw;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -98,12 +110,6 @@ body {
   color: transparent;
   background-position: 40% 50%;
   position: relative;
-
-}
-
-.refest,
-.adress {
-  padding: .7em;
 }
 
 .disappear {
@@ -116,16 +122,9 @@ body {
 
 .noselect {
   -webkit-touch-callout: none;
-  /* iOS Safari */
   -webkit-user-select: none;
-  /* Safari */
   -khtml-user-select: none;
-  /* Konqueror HTML */
   -moz-user-select: none;
-  /* Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
 }
