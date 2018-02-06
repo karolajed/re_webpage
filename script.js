@@ -1,52 +1,90 @@
 $(document).ready(function () {
 
-  var letters = $('.bg-letter');
-
-  //  console.log(letters[2]);
-
+  moveBackground();
   setInterval(function () {
-    sparkle(letters);
-  }, 40);
+    sparklingLetters();
+  }, 400);
 
-  var index = 0;
+  var index1 = 0, index2 = 0;
+  
   setInterval(function () {
-    if (index == 0) {
-      $('.refest').text('Refest 2018');
-      $('.adress img').src = 'img/OBJ3.png';
-      index = 1;
+    if (index1 == 0) {
+      $('.refest').replaceWith('<div class="refest">Refest 2018</div>');
+      index1 = 1;
     } else {
-      $('.refest').text('6-8.04 Kraków');
-      $('.adress img').src = 'img/Golik%C3%B3wka%2012.png';
-      index = 0;
+      $('.refest').replaceWith('<div class="refest">6-8.04 Kraków</div>');
+      index1 = 0;
     }
   }, 5000);
+  
+  setInterval(function () {
+    if (index2 == 0) {
+      $('.adress img').replaceWith('<div class="adress"><img src="img/OBJ3.png"/></div>');
+      index2 = 1;
+    } else {
+      $('.adress img').replaceWith('<div class="adress"><img src="img/Golik%C3%B3wka%2012.png"/></div>');
+      index2 = 0;
+    }
+  }, 6000);
 
 })
 
 var rand = function () {
-  return Math.floor(Math.random() * 6);
+  return Math.floor(Math.random() * 30000);
 };
 
 
-var sparkle = function (letters) {
-  var letter1, letter2, letter3, letter4, letter5;
-  //    console.log('disappear')
-  letter1 = letters[rand()];
-  ////    letter2 = letters[rand()];
-  ////    letter3 = letters[rand()];
-  ////    letter4 = letters[rand()];
-  ////    letter5 = letters[rand()];
-  letter1.addClass('disappear');
-  ////    letter2.css('opacity', 0);
-  ////    letter3.css('opacity', 0);
-  ////    letter4.css('opacity', 0);
-  ////    letter5.css('opacity', 0);
+var sparklingLetters = function () {
+//  $('.bg-letter1').addClass('disappear');
+//  setTimeout(function () {
+//    $('.bg-letter1').removeClass('disappear');
+//  }, rand());
+  $('.bg-letter2').addClass('disappear');
   setTimeout(function () {
-    //      console.log('appear')
-    letter1.removeClass('disappear');
-    ////      letter2.css('opacity', 1);
-    ////      letter3.css('opacity', 1);
-    ////      letter4.css('opacity', 1);
-    ////      letter5.css('opacity', 1);
-  }, 40);
+    $('.bg-letter2').removeClass('disappear');
+  }, rand());
+  $('.bg-letter3').addClass('disappear');
+  setTimeout(function () {
+    $('.bg-letter3').removeClass('disappear');
+  }, rand());
+//  $('.bg-letter4').addClass('disappear');
+//  setTimeout(function () {
+//    $('.bg-letter4').removeClass('disappear');
+//  }, rand());
+  $('.bg-letter5').addClass('disappear');
+  setTimeout(function () {
+    $('.bg-letter5').removeClass('disappear');
+  }, rand());
+//  $('.bg-letter6').addClass('disappear');
+//  setTimeout(function () {
+//    $('.bg-letter6').removeClass('disappear');
+//  }, rand());
+  $('.bg-letter7').addClass('disappear');
+  setTimeout(function () {
+    $('.bg-letter7').removeClass('disappear');
+  }, rand());
+//  $('.bg-letter8').addClass('disappear');
+//  setTimeout(function () {
+//    $('.bg-letter8').removeClass('disappear');
+//  }, rand());
+  $('.bg-letter9').addClass('disappear');
+  setTimeout(function () {
+    $('.bg-letter9').removeClass('disappear');
+  }, rand());
+};
+
+var moveBackground = function () {
+  var mouseX, mouseY;
+  var ww = $(window).width();
+  var wh = $(window).height();
+  var traX, traY;
+  $(document).mousemove(function (e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+    traX = ((4 * mouseX) / 570) + 40;
+    traY = ((4 * mouseY) / 570) + 50;
+    $(".refest").css({
+      "background-position": traX + "%" + traY + "%"
+    });
+  });
 };

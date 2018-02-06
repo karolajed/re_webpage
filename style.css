@@ -43,11 +43,27 @@ body {
   align-content: space-between;
 }
 
-.bg-letter {
+.bg-letter1,
+.bg-letter2,
+.bg-letter3,
+.bg-letter4,
+.bg-letter5,
+.bg-letter6,
+.bg-letter7,
+.bg-letter8,
+.bg-letter9 {
   padding: 1.6em;
 }
 
-.bg-letter:hover {
+.bg-letter1:hover,
+.bg-letter2:hover, 
+.bg-letter3:hover,
+.bg-letter4:hover,
+.bg-letter5:hover,
+.bg-letter6:hover,
+.bg-letter7:hover,
+.bg-letter8:hover,
+.bg-letter9:hover {
   opacity: 0;
 }
 
@@ -74,11 +90,15 @@ body {
   letter-spacing: .3em;
   text-transform: uppercase;
   color: #fff;
-  background: url(img/bg.png) no-repeat;
+  background: url(img/bg.png) repeat;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-position: 40% 50%;
+  position: relative;
+
 }
 
 .refest,
